@@ -49,7 +49,7 @@ app.put("/repositories/:id", (request, response) => {
 
   repositories[findRepositoryIndex] = repository;
 
-  return response.json(repository);
+  return response.status(204).json(repository);
  
 });
 
@@ -81,7 +81,7 @@ app.post("/repositories/:id/like", (request, response) => {
   
   repositories[findRepositoryIndex].likes += 1;
 
-  return response.json(repositories[findRepositoryIndex]);
+  return response.stauts(204).json(repositories[findRepositoryIndex]);
   
 });
 
